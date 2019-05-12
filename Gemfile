@@ -51,6 +51,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'devise'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :test do
