@@ -1,0 +1,6 @@
+<h1>商品一覧</h1>
+<% @Products.each do |product| %>
+  <%= product.name %><br>
+  <%= product.description %><br>
+  <%= product.price %><br>
+<% end %>
