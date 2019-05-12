@@ -41,6 +41,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
+  gem 'faker'
 end
 
 group :development do
@@ -52,6 +53,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'devise'
   gem 'letter_opener_web', '~> 1.0'
+  gem 'annotate'
 end
 
 group :test do
@@ -66,3 +68,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dotenv-rails'
+
+gem 'hamlit'
+
+gem 'active_decorator'
