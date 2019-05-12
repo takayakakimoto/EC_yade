@@ -1,0 +1,8 @@
+%h1 商品一覧
+- @Products.each do |product|
+  .product
+    %p
+      = product.name
+    %p
+      = product.display_price
+    %hr
