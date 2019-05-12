@@ -9,9 +9,10 @@
 10.times do
   name = Faker::Dessert.variety
   description = Faker::Lorem.sentence #text
+  price = Faker::Number.within(100..100000)
 
   Product.create!(name: name,
                   description: description,
-                  price: 1000,
+                  price: price,
                   )
 end
