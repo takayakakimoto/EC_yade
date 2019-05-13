@@ -20,7 +20,7 @@ module ECYade
       g.javascripts false
       g.stylesheets false
       g.helper false
-      g.test_framework :rspec
+      g.test_framework :rspec,
         fixtures: true,
         fixture_replacement: :factory_bot,
         view_specs: false,
