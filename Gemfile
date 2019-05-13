@@ -74,3 +74,6 @@ gem 'dotenv-rails'
 gem 'hamlit'
 
 gem 'active_decorator'
+
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'
