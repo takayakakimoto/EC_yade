@@ -77,3 +77,5 @@ gem 'active_decorator'
 
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
+
+gem 'simple_form'
