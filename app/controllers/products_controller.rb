@@ -12,8 +12,12 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    @product.save
-    redirect_to products_path
+    if @product.save
+      redirect_to root_path, notice: '作成に成功'
+    else
+      flash[:error] = '作成に失敗'
+      render :new
+    end
   end
 
   private
