@@ -1,0 +1,8 @@
+%h2.center 商品情報登録
+.container
+= simple_form_for(@product) do |f|
+  = f.input :name
+  = f.input :description
+  = f.input :price
+  = f.input :image, as: :file, input_html: {accept: (@product.image.accept_extensions)}
+  = f.button :submit

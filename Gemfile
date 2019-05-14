@@ -74,3 +74,12 @@ gem 'dotenv-rails'
 gem 'hamlit'
 
 gem 'active_decorator'
+
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'
+
+gem 'simple_form'
+
+gem 'carrierwave',             '1.1.0'
+gem 'mini_magick',             '4.7.0'
+gem 'fog',                     '1.40.0'
