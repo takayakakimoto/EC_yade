@@ -23,10 +23,12 @@ ActiveRecord::Schema.define(version: 2019_05_15_160424) do
   end
 
   create_table "baskets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "products_id"
     t.index ["products_id"], name: "index_baskets_on_products_id"
+    t.index ["user_id"], name: "index_baskets_on_user_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -59,5 +61,6 @@ ActiveRecord::Schema.define(version: 2019_05_15_160424) do
   add_foreign_key "basket_products", "baskets"
   add_foreign_key "basket_products", "products"
   add_foreign_key "baskets", "products", column: "products_id"
+  add_foreign_key "baskets", "users"
   add_foreign_key "users", "baskets"
 end
