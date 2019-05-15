@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_15_155255) do
+ActiveRecord::Schema.define(version: 2019_05_15_160424) do
 
   create_table "basket_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "quantity"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_05_15_155255) do
   create_table "baskets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "products_id"
+    t.index ["products_id"], name: "index_baskets_on_products_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -56,5 +58,6 @@ ActiveRecord::Schema.define(version: 2019_05_15_155255) do
 
   add_foreign_key "basket_products", "baskets"
   add_foreign_key "basket_products", "products"
+  add_foreign_key "baskets", "products", column: "products_id"
   add_foreign_key "users", "baskets"
 end
