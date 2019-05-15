@@ -3,7 +3,7 @@
   .row
     - @products.each do |product|
       .col.s12.m6
-        .card
+        .cards
           .card-image
             - if product.image.present?
               = image_tag product.image_url
