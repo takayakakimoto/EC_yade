@@ -6,6 +6,7 @@
         .card-image
           - if @product.image.present?
             = image_tag @product.image_url
+      .card
         %span.card-title
           #{ @product.name} (#{@product.display_price})
         .card-content
