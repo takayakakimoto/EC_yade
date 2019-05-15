@@ -1,0 +1,13 @@
+%h2.center 商品詳細ページ
+.products
+  .row
+    .col.s12.m7
+      .card
+        .card-image
+          - if @product.image.present?
+            = image_tag @product.image_url
+        %span.card-title
+          #{ @product.name} (#{@product.display_price})
+        .card-content
+          %p
+            #{ @product.description}
