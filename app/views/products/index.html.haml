@@ -1,13 +1,13 @@
 %h2.center 商品一覧
-.products
+.products.center
   .row
     - @products.each do |product|
-      .col.s12.m6.
+      .col.s12.m6
         .card
           .card-image
             - if product.image.present?
               = image_tag product.image_url
-            %span.card-title
+            %span.card-title.shadow
             #{link_to product.name, product}(#{product.display_price})
           .card-content
             %p

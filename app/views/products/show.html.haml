@@ -1,14 +1,19 @@
 %h2.center 商品詳細ページ
-.products
+.products.center
   .row
-    .col.s12.m7
+    .col.s12.m12
       .card
         .card-image
-          - if @product.image.present?
-            = image_tag @product.image_url
+          = image_tag @product.image.url || "sample.png"
       .card
-        %span.card-title
-          #{ @product.name} (#{@product.display_price})
+        .card-title
+          %p
+            = @product.name
         .card-content
           %p
-            #{ @product.description}
+            = @product.description
+          %p
+            = @product.display_price
+
+        .btn.btn-large
+          買い物カゴに入れる！
