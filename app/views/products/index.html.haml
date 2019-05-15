@@ -7,7 +7,7 @@
           .card-image
             - if product.image.present?
               = image_tag product.image_url
-            %span.card-title.shadow
+            %span.card-title
             #{link_to product.name, product}(#{product.display_price})
           .card-content
             %p
