@@ -1,4 +1,4 @@
 class BasketProduct < ApplicationRecord
   belongs_to :basket
-  has_many :products
+  belongs_to :product
 end

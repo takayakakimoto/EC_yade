@@ -5,5 +5,5 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :image, presence: true
   mount_uploader:image, ImageUploader
-  has_many :basket_products
+  has_many :basket_products, dependent: :destroy
 end
