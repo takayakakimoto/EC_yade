@@ -1,0 +1,1 @@
+class Products::ApplicationController < ApplicationController
