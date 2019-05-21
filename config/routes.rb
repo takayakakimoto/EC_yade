@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'toppages/index'
-  devise_for :users
   root to: 'toppages#index'
+  devise_for :users
   resource :basket, only: %i(show)
   resources :products do
     scope module: :products do
