@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'toppages/index'
   devise_for :users
   root to: 'toppages#index'
   resource :basket, only: %i(show)
