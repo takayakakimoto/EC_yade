@@ -44,6 +44,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -85,3 +86,5 @@ gem 'mini_magick',             '4.7.0'
 gem 'fog',                     '1.40.0'
 
 gem "hashid-rails", "~> 1.0"
+
+gem 'stripe'
