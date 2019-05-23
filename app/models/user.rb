@@ -17,6 +17,8 @@ class User < ApplicationRecord
   def checkout!(token, product_ids:)
     #正しい金額
     total = basket.total_price(product_ids: product_ids)
+
+  transaction do
     #削除
     basket_products = basket.basket_products.where(product_id: product_ids)
     basket_products.each(&:destroy!)
@@ -25,6 +27,7 @@ class User < ApplicationRecord
     purchase_record = prepare_purchase_record
     ids = product_ids.map { |id| { product_id: id } }
     purchase_record.purchase_record_products.create!(ids)
+  end
 
 
     Charge.create!(total, token)
