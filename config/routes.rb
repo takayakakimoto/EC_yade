@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'toppages#index'
   devise_for :users
   resource :basket, only: %i(show)
+  resource :charge, only: %i(create)
   resources :products do
     scope module: :products do
       resources :add_to_baskets, only: %i(create)
