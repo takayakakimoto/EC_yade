@@ -4,8 +4,9 @@ class ChargesController < ApplicationController
     token = params[:stripeToken]
     product_ids = params[:product_ids].map(&:to_i)
 
-    products = current_user.basket.products.where(id: product_ids)
-    total = products.sum(:price)
+    #正しい金額で決済する
+    total = current_user.basket.total_price(product_ids: product_ids)
+
     #削除
     basket_products = current_user.basket.basket_products.where(product_id: product_ids)
     basket_products.each(&:destroy!)
