@@ -8,7 +8,7 @@ class Basket < ApplicationRecord
 
   private
   def total_jpy_price
-      jp_products = products
-      jp_products.sum(:price)
+    jp_products = products
+    jp_products.sum(:price)
   end
 end
