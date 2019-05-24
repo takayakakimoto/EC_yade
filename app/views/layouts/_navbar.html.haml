@@ -1,8 +1,12 @@
-%nav
+%nav.nav-extended
+  %nav.nav-extended
   .nav-wrapper
     %a.brand-logo{:href => "/"} EC_yade
     %ul#nav-mobile.right.hide-on-med-and-down
       - if user_signed_in?
+        %li
+          .btn-floating.btn-large.halfway-fab.waves-effect.waves-light.teal
+            = link_to "＋", new_product_path
         %li
           = link_to "買い物カゴ", basket_path
         %li

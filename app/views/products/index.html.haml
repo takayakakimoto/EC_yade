@@ -1,4 +1,10 @@
-%h2.center 商品一覧
+%h2.center
+  商品一覧
+  %form
+    .input-field
+      %input#search{:required => "", :type => "search"}/
+      %label.label-icon{:for => "search"}
+      %i.material-icons search
 .products.center
   .row
     - @products.each do |product|
