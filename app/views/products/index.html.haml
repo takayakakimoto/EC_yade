@@ -1,7 +1,9 @@
-%h2.center 商品一覧
+%h2.center
+  商品一覧
+= render 'products/search'
 .products.center
   .row
-    - @products.each do |product|
+    - @search_products.each do |product|
       .col.s12.m6
         .card
           .card-image
