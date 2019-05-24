@@ -89,3 +89,5 @@ gem "hashid-rails", "~> 1.0"
 gem 'stripe'
 
 gem 'ransack'
+
+gem 'kaminari'
