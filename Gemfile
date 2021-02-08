@@ -80,7 +80,7 @@ gem 'material_icons'
 
 gem 'simple_form'
 
-gem 'carrierwave',             '1.1.0'
+gem 'carrierwave',             '1.3.2'
 gem 'mini_magick',             '4.7.0'
 gem 'fog',                     '1.40.0'
 
